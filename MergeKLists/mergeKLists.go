@@ -12,20 +12,21 @@ type ListNode struct {
 func mergeKLists(lists []*ListNode) *ListNode {
 	listsNUms := make([]int, 0)
 	var res *ListNode
+
 	if len(lists) == 0 {
 		return nil
 	}
-	pic := res
+	var pic *ListNode
 	resLen := 0
 	lenTemp := lists
-	len := 0
+	sLen := 0
 	for _, v := range lenTemp {
 		for v != nil {
-			len++
+			sLen++
 			v = v.Next
 		}
 	}
-	for resLen < len {
+	for resLen < sLen {
 		tempMin := 99999999999
 		tempIndex := 0
 		for i, v := range lists {
@@ -41,6 +42,11 @@ func mergeKLists(lists []*ListNode) *ListNode {
 		resLen++
 		lists[tempIndex] = lists[tempIndex].Next
 	}
+	fmt.Print(listsNUms)
+	if len(listsNUms) > 0 {
+		res = &ListNode{}
+		pic = res
+	}
 	for i, v := range listsNUms {
 		if i == 0 {
 			pic.Val = v
@@ -52,9 +58,9 @@ func mergeKLists(lists []*ListNode) *ListNode {
 	return res
 }
 func main() {
-	l1 := &ListNode{1, &ListNode{2, &ListNode{3, &ListNode{Val: 3, Next: &ListNode{Val: 4}}}}}
-	l2 := &ListNode{5, &ListNode{6, &ListNode{7, nil}}}
-	l3 := &ListNode{7, &ListNode{8, &ListNode{9, nil}}}
+	l1 := &ListNode{1, &ListNode{4, &ListNode{5, nil}}}
+	l2 := &ListNode{1, &ListNode{3, &ListNode{4, nil}}}
+	l3 := &ListNode{2, &ListNode{6, nil}}
 	in := make([]*ListNode, 0)
 	in = append(in, l1, l2, l3)
 	ss := mergeKLists(in)
