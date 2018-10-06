@@ -11,7 +11,10 @@ type ListNode struct {
 
 func mergeKLists(lists []*ListNode) *ListNode {
 	listsNUms := make([]int, 0)
-	res := &ListNode{}
+	var res *ListNode
+	if len(lists) == 0 {
+		return nil
+	}
 	pic := res
 	resLen := 0
 	lenTemp := lists
