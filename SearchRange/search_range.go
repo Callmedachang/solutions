@@ -17,48 +17,71 @@ import "fmt"
 输入: nums = [5,7,7,8,8,10], target = 6
 输出: [-1,-1]*/
 func searchRange(nums []int, target int) []int {
-	if len(nums)==0{
-		return []int{-1,-1}
+	if len(nums) == 0 {
+		return []int{-1, -1}
+	}
+	if len(nums) == 1 {
+		if nums[0] != target {
+			return []int{-1, -1}
+		} else {
+			return []int{0, 0}
+		}
+
 	}
 	before := 0
 	end := 0
 	length := len(nums)
 	head := 0
 	tail := length - 1
+	has := 0
 	for tail > head {
 		mid := (head + tail) / 2
 		if nums[mid] == target {
 			before = mid
 			end = mid
+			has++
 			break
 		} else if nums[mid] > target {
 			tail = mid
 		} else {
 			head = mid
 		}
+		if tail == head+1 {
+			if nums[tail] == target {
+				return []int{tail, tail}
+			} else if nums[head] == target {
+				return []int{head, head}
+			} else {
+				return []int{-1, -1}
+			}
+		}
 	}
 
 	for before > head {
-		index := before-1
+		index := before - 1
 		if nums[index] == target {
 			before--
-		}else {
+		} else {
 			break
 		}
 	}
 	for end < tail {
-		index := end+1
+		index := end + 1
 		if nums[index] == target {
 			end++
-		}else {
+		} else {
 			break
 		}
 	}
-	return []int{before, end}
+	if has > 0 {
+		return []int{before, end}
+	} else {
+		return []int{-1, -1}
+	}
 }
 func main() {
 	//ss := []int{5, 7, 7, 8, 8, 10}
 	//fmt.Println(searchRange(ss, 8))
-	s2 := []int{10}
-	fmt.Println(searchRange(s2, 10))
+	s2 := []int{1, 2, 3}
+	fmt.Println(searchRange(s2, 1))
 }
