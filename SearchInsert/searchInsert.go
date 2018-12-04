@@ -31,6 +31,7 @@ func searchInsert(nums []int, target int) int {
 		return mid + 1
 	}
 }
+
 func main() {
 	s2 := []int{1,3,5}
 	fmt.Println(searchInsert(s2, 1))
