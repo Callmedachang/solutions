@@ -1,6 +1,8 @@
 package main
 
-import "log"
+import (
+	"log"
+)
 
 func isValidSudoku(board [][]byte) bool {
 	//row
@@ -53,6 +55,7 @@ func isValidSudoku(board [][]byte) bool {
 	}
 	return true
 }
+
 func main() {
 	ss := [][]byte{
 		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
