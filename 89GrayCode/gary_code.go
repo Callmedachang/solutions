@@ -30,5 +30,5 @@ func grayCode(n int) []int {
 	return res
 }
 func main() {
-	log.Println(grayCode(4))
+	log.Println(grayCode(3))
 }
