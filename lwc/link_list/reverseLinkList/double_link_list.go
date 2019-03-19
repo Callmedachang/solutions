@@ -44,7 +44,7 @@ func reverse4(node *DoubleNode) *DoubleNode {
 /*
 mark
 非递归的实现：
-用一个pre来记录遍地到N的每一个节点之前已经反转好的链表，到最后preNode就是整个被反转的链表
+用一个pre来记录遍地到N的每一个节点之前已经反转好的链表，到最后preNode就是整个被反转的链表:preNode+Head
 递归的实现：
 递归点：
 假设这个节点之后所有节点已经反转OK
