@@ -1,4 +1,4 @@
-package mergeSort
+package merge
 
 import (
 	"log"

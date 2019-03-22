@@ -1,4 +1,4 @@
-package mergeSort
+package merge
 
 func MergeSort(source []int) []int {
 	all := make([][]int, 0)
