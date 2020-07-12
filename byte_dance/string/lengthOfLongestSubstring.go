@@ -1,4 +1,4 @@
-package main
+package string
 
 import (
 	"strings"
