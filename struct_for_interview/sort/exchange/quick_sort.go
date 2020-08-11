@@ -27,19 +27,19 @@ func QuickSort2(a []int, low, hight int) {
 	}
 }
 
-func Partition(a []int, low, hight int) int {
+func Partition(a []int, low, high int) int {
 	//指定一个基准元素
-	pivot := a[hight]
+	pivot := a[high]
 	//标记交换后的位置
 	storeIndex := low
-	for i := low; i < hight; i++ {
+	for i := low; i < high; i++ {
 		if a[i] < pivot {
 			a[i], a[storeIndex] = a[storeIndex], a[i]
 			storeIndex++
 		}
 	}
 	//最后和基准值交换
-	a[hight], a[storeIndex] = a[storeIndex], a[hight]
+	a[high], a[storeIndex] = a[storeIndex], a[high]
 	return storeIndex
 }
 //选出第k小元素，k为1~len(s)
