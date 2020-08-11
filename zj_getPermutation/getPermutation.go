@@ -34,7 +34,7 @@ import (
 func getPermutation(n int, k int) string {
 	res := ""
 	has := make(map[int]int, n)
-
+	index := 1
 	for n > 0 {
 		em := getEveryMul(n)
 		fir := 1
@@ -43,18 +43,23 @@ func getPermutation(n int, k int) string {
 			k = k % em
 			fir++
 		} else {
-			fir = 1
+			fir = index
 		}
 		if fir > 1 && k == 0 {
 			fir--
 			k = em
 		}
-		for has[fir] != 0 {
-			fir++
+		temp := fir
+		for temp > 0 {
+			if has[temp] != 0 {
+				fir++
+			}
+			temp--
 		}
 		res = res + strconv.Itoa(fir)
 		has [fir] = 1
 		n --
+		index++
 	}
 	return res
 }

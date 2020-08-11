@@ -1,5 +1,12 @@
 package main
+
 import "sort"
+
+//[-2,-1,0,1,2]
+
+
+
+
 
 func threeSum2(nums []int) [][]int {
 	// 排序后，可以按规律查找
@@ -31,7 +38,6 @@ func threeSum2(nums []int) [][]int {
 			}
 		}
 	}
-
 	return res
 }
 
@@ -48,6 +54,5 @@ func next(nums []int, l, r int) (int, int) {
 			return l, r
 		}
 	}
-
 	return l, r
 }

@@ -1,4 +1,4 @@
-package main
+package string
 
 type MinStack struct {
 	DataStack []int //数据栈 使用数组实现
