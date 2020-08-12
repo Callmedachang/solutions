@@ -2,6 +2,7 @@ package main
 
 import (
 	"container/list"
+	"log"
 )
 
 type TreeNode struct {
@@ -73,8 +74,9 @@ func midRangeNoRecursion(t *TreeNode) []int {
 	return res
 }
 
+
 // 先序遍历-非递归
-func firsteRangeNoRecursion(t *TreeNode) []int {
+func firstRangeNoRecursion(t *TreeNode) []int {
 	stack := list.New()
 	res := make([]int, 0)
 	for t != nil || stack.Len() != 0 {
@@ -85,13 +87,21 @@ func firsteRangeNoRecursion(t *TreeNode) []int {
 		}
 		if stack.Len() != 0 {
 			v := stack.Back()
-			t = t.Right
+			s:=v.Value.(*TreeNode)
+			t = s.Right
 			stack.Remove(v)
 		}
 	}
 	return res
 }
 
+//         8
+//        / \
+//       3   9
+//     /   \
+//    2     4
+//   / \   / \
+//  1   5  6  7
 // 后序遍历-非递归
 func lastRangeNoRecursion(t *TreeNode) []int {
 	stack := list.New()
@@ -193,16 +203,7 @@ func buildTreeWithPreAndMid(pre, in []int) *TreeNode {
 	return res
 }
 
-func indexOf(val int, nums []int) int {
-	for i, v := range nums {
-		if v == val {
-			return i
-		}
-	}
-	return 0
-}
-
-func buildTreeWithPreAndAft(in []int, post []int) *TreeNode {
+func buildTreeWithMidAndAft(in []int, post []int) *TreeNode {
 	if len(in) == 0 {
 		return nil
 	}
@@ -217,10 +218,23 @@ func buildTreeWithPreAndAft(in []int, post []int) *TreeNode {
 
 	idx := indexOf(res.Val, in)
 
-	res.Left = buildTreeWithPreAndAft(in[:idx], post[:idx])
-	res.Right = buildTreeWithPreAndAft(in[idx+1:], post[idx:len(post)-1])
+	res.Left = buildTreeWithMidAndAft(in[:idx], post[:idx])
+	res.Right = buildTreeWithMidAndAft(in[idx+1:], post[idx:len(post)-1])
 
 	return res
 }
 
+func indexOf(val int, nums []int) int {
+	for i, v := range nums {
+		if v == val {
+			return i
+		}
+	}
+	return 0
+}
+
 //func buildTree
+func main() {
+	t:=&TreeNode{Val:1,Left:&TreeNode{Val:2},Right:&TreeNode{Val:3}}
+	log.Println(lastRangeNoRecursion(t))
+}
