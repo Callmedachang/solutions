@@ -1,4 +1,4 @@
-package interview42Reverse_Word
+package interview_42Reverse_Word
 
 import "strings"
 

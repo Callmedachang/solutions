@@ -1,4 +1,4 @@
-package interview_8Find_Min_Num
+package interview_08Find_Min_Num
 
 import (
 	"log"

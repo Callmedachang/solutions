@@ -1,4 +1,4 @@
-package initerview_38GetNumOfK
+package interview_38GetNumOfK
 
 import (
 	"log"

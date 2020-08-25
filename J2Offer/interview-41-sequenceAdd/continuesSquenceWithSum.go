@@ -1,4 +1,4 @@
-package interview41_sequenceAdd
+package interview_41_sequenceAdd
 
 import "log"
 

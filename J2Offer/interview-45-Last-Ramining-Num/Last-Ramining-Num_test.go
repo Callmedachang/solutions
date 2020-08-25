@@ -1,4 +1,4 @@
-package interview45_Last_Ramining_Num
+package interview_45_Last_Ramining_Num
 
 import (
 	"log"

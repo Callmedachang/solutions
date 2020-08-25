@@ -1,4 +1,4 @@
-package interview44_Shun_Zi
+package interview_44_Shun_Zi
 
 import (
 	"log"

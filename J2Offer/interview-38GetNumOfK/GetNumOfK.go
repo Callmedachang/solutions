@@ -1,4 +1,4 @@
-package initerview_38GetNumOfK
+package interview_38GetNumOfK
 
 /*
 数字在排序数组中出现的次数题目：统计一个数字在排序数组中出现的次数。

@@ -1,4 +1,4 @@
-package interview43_Zhi_Shai_Zi
+package interview_43_Zhi_Shai_Zi
 
 import "testing"
 
