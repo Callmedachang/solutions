@@ -28,7 +28,7 @@ func qs(s []int) []int {
 
 func partition(a []int, lo, hi int) int {
 	pivot := a[hi]
-	i := lo - 1
+	i := lo -1
 	for j := lo; j < hi; j++ {
 		if a[j] < pivot {
 			i++

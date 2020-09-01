@@ -6,6 +6,6 @@ import (
 )
 
 func TestFindInMatrix(t *testing.T) {
-	s:=FindInMatrix([][]int{}, 1)
+	s := FindInMatrix([][]int{}, 1)
 	log.Println(s)
 }
