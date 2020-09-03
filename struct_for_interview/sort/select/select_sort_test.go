@@ -8,4 +8,5 @@ import (
 func TestSelectSort(t *testing.T) {
 	source1 := []int{9,2,3,4,8,7,6}
 	log.Println(SelectSort(source1))
+	log.Println(int(566751910749798442))
 }
