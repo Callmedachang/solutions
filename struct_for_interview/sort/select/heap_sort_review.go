@@ -1,5 +1,7 @@
 package _select
 
+import "log"
+
 func HeapSort(s []int) {
 	N := len(s) - 1 //s[0]不用，实际元素数量和最后一个元素的角标都为N
 	//构造堆
@@ -12,9 +14,10 @@ func HeapSort(s []int) {
 	for k := N / 2; k >= 1; k-- {
 		sink(s, k, N)
 	}
+	log.Println(s)
 	//下沉排序
 	for N > 1 {
-		s[1], s[N] = s[N], s[1] //将大的放在数组后面，升序排序
+		s[1], s[N] = s[N], s[1]
 		N--
 		sink(s, 1, N)
 	}
