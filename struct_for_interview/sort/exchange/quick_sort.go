@@ -42,6 +42,7 @@ func Partition(a []int, low, high int) int {
 	a[high], a[storeIndex] = a[storeIndex], a[high]
 	return storeIndex
 }
+
 //选出第k小元素，k为1~len(s)
 func SelectKthMin(s []int, k int) int {
 	k--

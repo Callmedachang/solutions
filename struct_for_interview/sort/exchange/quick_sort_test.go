@@ -2,12 +2,14 @@ package exchange_test
 
 import (
 	"log"
+	"solutions/struct_for_interview/sort/exchange"
 	"testing"
 )
 
 func TestPartition(t *testing.T) {
 	ss := []int{7, 4, 6, 3, 7, 2, 9, 9, 3, 4, 6, 7, 45, 5, 6, 3, 8, 7}
-	quickSort(ss,0,len(ss)-1)
+	//QuickSort2(ss,0,len(ss)-1)
+	exchange.QuickSort2(ss,0,len(ss)-1)
 	log.Println(ss)
 }
 
