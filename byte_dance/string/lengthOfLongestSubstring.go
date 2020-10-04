@@ -2,7 +2,6 @@ package string
 
 import (
 	"strings"
-	"log"
 )
 
 func lengthOfLongestSubstring(s string) int {
@@ -29,8 +28,4 @@ func cutMap(src map[string]int, index int) {
 		}
 	}
 	return
-}
-
-func main() {
-	log.Println(lengthOfLongestSubstring("abccc"))
 }

@@ -66,6 +66,7 @@ func search(nums []int, target int) int {
 	return -1
 }
 
+
 func main() {
 	log.Println(search([]int{4, 5, 6, 7, 8, 1, 2, 3}, 8))
 }

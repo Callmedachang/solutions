@@ -1,6 +1,6 @@
 package string
+
 import (
-	"log"
 	"strings"
 )
 
@@ -54,8 +54,6 @@ func multiply(num1 string, num2 string) string {
 	res := "0"
 	for i, v := range l2 {
 		res=strAdd(res,strMul(num1, v, len(num2)-i-1))
-		log.Println(strMul(num1, v, len(num2)-i-1))
-		log.Println(res)
 	}
 	return res
 }

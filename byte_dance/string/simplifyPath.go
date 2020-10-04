@@ -32,7 +32,3 @@ func cutSlice(s1 []string) []string {
 		return s1
 	}
 }
-
-func main() {
-	log.Println(simplifyPath("/a/./b/../../c/"))
-}
