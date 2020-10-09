@@ -1,9 +1,8 @@
 package main
 
 import (
-	"log"
-	"sort"
 	"math"
+	"sort"
 )
 
 func merge(intervals [][]int) [][]int {
@@ -35,11 +34,4 @@ func mergeTwo(arr1, arr2 []int) (ret []int, b bool) {
 	left := int(math.Min(float64(arr1[0]), float64(arr2[0])))
 	right := int(math.Max(float64(arr1[1]), float64(arr2[1])))
 	return []int{left, right}, true
-}
-
-func main() {
-	//log.Println(merge([][]int{{1, 3}, {2, 6}, {8, 10}, {15, 18}}))
-	//log.Println(merge([][]int{{1, 4}, {0, 5}}))
-	//log.Println(merge([][]int{}))
-	log.Println(merge([][]int{{2, 3}, {4, 5}, {6, 7}, {8, 9}, {1, 10}}))
 }
