@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 班上有 N 名学生。其中有些人是朋友，有些则不是。他们的友谊具有是传递性。如果已知 A 是 B 的朋友，B 是 C 的朋友，那么我们可以认为 A 也是 C 的朋友。所谓的朋友圈，是指所有朋友的集合。
 
@@ -62,12 +60,4 @@ func findCircleNum(M [][]int) int {
 	}
 
 	return res
-}
-func main() {
-	M := make([][]int, 4)
-	M[0] = []int{1, 0, 0, 1}
-	M[1] = []int{0, 1, 1, 0}
-	M[2] = []int{0, 1, 1, 1}
-	M[3] = []int{1, 0, 1, 1}
-	log.Println(findCircleNum(M))
 }

@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 /*
 最长连续序列
 给定一个未排序的整数数组，找出最长连续序列的长度。
@@ -39,7 +37,4 @@ func longestConsecutive(nums []int) int {
 		max = 1
 	}
 	return res
-}
-func main() {
-	log.Println(longestConsecutive([]int{100,5, 4, 200, 1, 3, 2}))
 }

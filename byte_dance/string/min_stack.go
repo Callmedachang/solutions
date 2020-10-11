@@ -48,15 +48,6 @@ func (m *MinStack) GetMin() int {
 
 
 
-
-func main() {
-	s := Constructor()
-	s.Push(-2)
-	s.Push(0)
-	s.Push(-3)
-	s.GetMin()
-}
-
 /**
  * Your MinStack object will be instantiated and called as such:
  * obj := Constructor();

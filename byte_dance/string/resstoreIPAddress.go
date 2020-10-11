@@ -2,6 +2,8 @@ package string
 
 import (
 	"fmt"
+	"strconv"
+	"strings"
 )
 
 func restoreIpAddresses(s string) []string {
@@ -83,4 +85,77 @@ func isOK(s string) bool {
 	}
 
 	return false
+}
+
+func RestoreIpAddresses2(s string) []string {
+	ss := strings.Split(s, "")
+	nums := make([]int, len(ss))
+	for i, v := range ss {
+		nums[i], _ = strconv.Atoi(v)
+	}
+	_, res := dfs(nums, 4)
+	return res
+}
+
+func dfs(nums []int, index int) (bool, []string) {
+	if len(nums) < index || len(nums) > index*3 {
+		return false, nil
+	}
+	if index == 1 {
+		if getNum(nums) < 256 {
+			if len(nums) > 1 && nums[0] == 0 {
+				return false, nil
+			}
+			return true, []string{spf(nums)}
+		} else {
+			return false, nil
+		}
+	}
+	res := make([]string, 0)
+	if nums[0] == 0 {
+		ok, temp := dfs(nums[1:], index-1)
+		if ok {
+			for _, v := range temp {
+				res = append(res, "0."+v)
+			}
+			return true, res
+		}
+		return false, nil
+
+	} else {
+		for i := 1; i < 4; i++ {
+			if i > len(nums)-1 {
+				break
+			}
+			if getNum(nums[:i]) < 256 {
+				ok, temp := dfs(nums[i:], index-1)
+				if ok {
+					for _, v := range temp {
+						res = append(res, spf(nums[:i])+"."+v)
+					}
+				}
+			}
+		}
+		return true, res
+	}
+}
+
+func getNum(s []int) int {
+	len := len(s)
+	switch len {
+	case 3:
+		return s[0]*100 + s[1]*10 + s[2]
+	case 2:
+		return s[0]*10 + s[1]
+	default:
+		return s[0]
+	}
+}
+
+func spf(s []int) string {
+	res := ""
+	for i := range s {
+		res += strconv.Itoa(s[i])
+	}
+	return res
 }
