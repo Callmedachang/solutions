@@ -14,9 +14,7 @@ func threeSum2(nums []int,target int) [][]int {
 		if i > 0 && nums[i] == nums[i-1] {
 			continue
 		}
-
 		left, right := i+1, len(nums)-1
-
 		for left < right {
 			sum := nums[i] + nums[left] + nums[right]
 			switch {
