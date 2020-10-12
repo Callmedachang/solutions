@@ -98,7 +98,6 @@ func (c *LRUCache) moveToFirst(node *doublyLinkedNode) {
 		node.prev.next = node.next
 		node.next.prev = node.prev
 	}
-
 	// 策略是
 	// 如果需要移动 node 的话
 	// 先删除，再插入
