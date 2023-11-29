@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,8 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36030405-cda6-4fb8-9192-6317a7a0353d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/struct_for_interview/slice/slice_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2385TImeToCoverAllTrr/time_to_cover_tree.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/949-maxtime/max_time.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/struct_for_interview/type+pointer/typeWithPointer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/struct_for_interview/type+pointer/typeWithPointer_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +41,7 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.3/libexec" />
+  <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -45,34 +51,53 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="5xyhi6xd" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2E42lYHCNMpULVF69WwwIk1rjRp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="go.import.settings.migrated" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
-    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.watchers.conflict.with.on.save.actions.check.performed&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yinshi/go/src/solutions&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Go Test.TestPersonal in solutions/struct_for_interview/type+pointer">
+    <configuration name="TestPersonal in solutions/struct_for_interview/type+pointer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="solutions" />
+      <working_directory value="$PROJECT_DIR$/struct_for_interview/type+pointer" />
+      <kind value="PACKAGE" />
+      <package value="solutions/struct_for_interview/type+pointer" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestPersonal\E$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestSliceFn in solutions/struct_for_interview/slice" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="solutions" />
       <working_directory value="$PROJECT_DIR$/struct_for_interview/slice" />
-      <framework value="gotest" />
       <kind value="PACKAGE" />
       <package value="solutions/struct_for_interview/slice" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
       <pattern value="^\QTestSliceFn\E$" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Test.TestPersonal in solutions/struct_for_interview/type+pointer" />
         <item itemvalue="Go Test.TestSliceFn in solutions/struct_for_interview/slice" />
       </list>
     </recent_temporary>
@@ -100,24 +125,6 @@
     </option>
   </component>
   <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1878" height="111" key="GridCell.Tab.0.bottom" timestamp="1661843050045">
-      <screen x="-1920" y="-307" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="111" key="GridCell.Tab.0.bottom/0.0.1440.900/-1920.-307.1920.1080@-1920.-307.1920.1080" timestamp="1661843050045" />
-    <state width="1878" height="111" key="GridCell.Tab.0.center" timestamp="1661843050043">
-      <screen x="-1920" y="-307" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="111" key="GridCell.Tab.0.center/0.0.1440.900/-1920.-307.1920.1080@-1920.-307.1920.1080" timestamp="1661843050043" />
-    <state width="1878" height="111" key="GridCell.Tab.0.left" timestamp="1661843050041">
-      <screen x="-1920" y="-307" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="111" key="GridCell.Tab.0.left/0.0.1440.900/-1920.-307.1920.1080@-1920.-307.1920.1080" timestamp="1661843050041" />
-    <state width="1878" height="111" key="GridCell.Tab.0.right" timestamp="1661843050044">
-      <screen x="-1920" y="-307" width="1920" height="1080" />
-    </state>
-    <state width="1878" height="111" key="GridCell.Tab.0.right/0.0.1440.900/-1920.-307.1920.1080@-1920.-307.1920.1080" timestamp="1661843050044" />
+    <settings-migrated>true</settings-migrated>
   </component>
 </project>
