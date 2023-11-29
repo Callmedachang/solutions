@@ -23,11 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36030405-cda6-4fb8-9192-6317a7a0353d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2385TImeToCoverAllTrr/time_to_cover_tree.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/949-maxtime/max_time.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/struct_for_interview/type+pointer/typeWithPointer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/struct_for_interview/type+pointer/typeWithPointer_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2385TImeToCoverAllTrr/time_to_cover_tree.go" beforeDir="false" afterPath="$PROJECT_DIR$/2385TImeToCoverAllTrr/time_to_cover_tree.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -15,10 +15,6 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func amountOfTime(root *TreeNode, start int) int {
-
-}
-
 func maxDeep(node *TreeNode) int64 {
 	if node == nil {
 		return 0
